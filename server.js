@@ -1,9 +1,14 @@
+import express from "express";
 const server = require('http').createServer();
 const cors = require('cors');
 const io = require('socket.io')(server, {
   cors: {
     origin: '*',
   },
+});
+const app=express();
+app.use("/",(req,res)=>{
+re.json({message:"hello server"});
 });
 
 const nodes = []; // Global variable to store node positions
